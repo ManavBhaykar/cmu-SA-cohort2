@@ -33,4 +33,6 @@ public interface CreateServicesAI extends java.rmi.Remote
 
 	String newOrder(String Date, String FirstName, String LastName, String Address, String Phone, String currentUser) throws RemoteException;
 
+	String newOrderTest(String Date, String FirstName, String LastName, String Address, String Phone, String currentUser) throws RemoteException;
+
 }

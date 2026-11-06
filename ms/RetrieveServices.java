@@ -62,6 +62,10 @@ public class RetrieveServices extends UnicastRemoteObject implements RetrieveSer
                 System.out.println("\t" + name);
             }
 
+            for (String name : boundNames) {
+                System.out.println("\t" + name);
+            }
+
         } catch (Exception e) {
 
             System.out.println("RetrieveServices binding err: " + e.getMessage()); 
@@ -104,6 +108,8 @@ public class RetrieveServices extends UnicastRemoteObject implements RetrieveSer
             stmt = conn.createStatement();
             
             String sql;
+            sql = "SELECT * FROM orders";
+
             sql = "SELECT * FROM orders";
             ResultSet rs = stmt.executeQuery(sql);
 
